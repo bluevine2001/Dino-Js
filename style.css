@@ -1,0 +1,40 @@
+.wrapper {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#canvas {
+  background: #000;
+}
+
+#playbtn {
+  padding: 5px;
+  border: #000 1px solid;
+  width: fit-content;
+  float: right;
+}
+
+#pausebtn {
+  padding: 5px;
+  border: #000 1px solid;
+  width: fit-content;
+  float: left;
+}
+
+#pausebtn:hover,
+#playbtn:hover {
+
+  background: #545454;
+  color: #fff;
+  cursor: pointer;
+}
+
+#score {
+  float: left;
+  padding: 5px;
+}
+
+#highscore {
+  float: right;
+}
