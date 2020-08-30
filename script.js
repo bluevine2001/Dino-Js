@@ -77,7 +77,8 @@ loop = function () {
         enemies = [];
         if (score > highScore) {
           highScore = score;
-        }
+          window.localStorage.setItem("highScore", highScore);
+        } //
         score = 0;
         gameSpeed = 3;
         looping = true;
