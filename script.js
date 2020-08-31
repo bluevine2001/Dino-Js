@@ -42,6 +42,15 @@ class Enemy {
 runner = new Runner();
 controller = {
   up: false,
+  touchHandle: function (event) {
+    console.log(event);
+    var touch_state = event.type == "touchstart" ? true : false;
+    if (event.type == "touchstart") {
+      controller.up = true;
+    } else {
+      controller.up = false;
+    }
+  },
   keylistener: function (event) {
     console.log(event);
     var key_state = event.type == "keydown" ? true : false;
@@ -123,6 +132,8 @@ loop = function () {
 };
 window.addEventListener("keydown", controller.keylistener);
 window.addEventListener("keyup", controller.keylistener);
+window.addEventListener("touchstart", controller.touchHandle);
+window.addEventListener("touchend", controller.touchHandle);
 window.requestAnimationFrame(loop);
 
 function startGame() {
