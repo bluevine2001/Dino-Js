@@ -96,16 +96,16 @@ loop = function () {
   }
   score += 1;
 
-  if (runner.y > 400 - 32 - 32) {
+  if (runner.y > canvas.height - 32 - 32) {
     //sol
     runner.jumping = false;
-    runner.y = 400 - 32 - 32;
+    runner.y = canvas.height - 32 - 32;
     runner.y_velocity = 0;
   }
 
   //dessine
   ctx.fillStyle = "#fff";
-  ctx.fillRect(0, 0, 600, 400);
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = "#F66D6D";
   //ctx.beginPath();
   ctx.fillRect(runner.x, runner.y, runner.width, runner.height);

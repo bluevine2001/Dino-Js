@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .wrapper {
   width: 600px;
   margin-left: auto;
@@ -37,4 +42,34 @@
 
 #highscore {
   float: right;
+}
+
+@media (max-width: 426px) {
+  #canvas {
+    width: 415px;
+  }
+
+  .wrapper {
+    width: 415px;
+  }
+}
+
+@media (max-width: 376px) {
+  #canvas {
+    width: 365px;
+  }
+
+  .wrapper {
+    width: 365px;
+  }
+}
+
+@media (max-width: 321px) {
+  #canvas {
+    width: 310px;
+  }
+
+  .wrapper {
+    width: 310px;
+  }
 }
