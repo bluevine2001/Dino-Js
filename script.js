@@ -137,9 +137,13 @@ window.addEventListener("touchend", controller.touchHandle);
 window.requestAnimationFrame(loop);
 
 function startGame() {
-  console.log("ok");
-  looping = true;
-  window.requestAnimationFrame(loop);
+  if (looping == false) {
+    console.log("ok");
+    looping = true;
+    window.requestAnimationFrame(loop);
+  } else {
+    console.log("nope");
+  }
 }
 
 function stopGame() {
